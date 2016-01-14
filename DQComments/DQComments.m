@@ -11,6 +11,11 @@
 @interface DQComments()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
+@property (nonatomic,copy) NSString *selectedText;
+
+@property (nonatomic, strong, nullable) NSTextView *textView;
+@property (nonatomic) NSRange selectedRange;
+
 @end
 
 @implementation DQComments
@@ -29,6 +34,10 @@
                                                  selector:@selector(didApplicationFinishLaunchingNotification:)
                                                      name:NSApplicationDidFinishLaunchingNotification
                                                    object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(selectionDidChange:)
+                                                     name:NSTextViewDidChangeSelectionNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -43,19 +52,66 @@
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
     if (menuItem) {
         [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
+        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Add Property Comments" action:@selector(doMenuAction) keyEquivalent:@"C"];
+        [actionMenuItem setKeyEquivalentModifierMask:NSAlternateKeyMask];
         [actionMenuItem setTarget:self];
         [[menuItem submenu] addItem:actionMenuItem];
     }
 }
 
-// Sample Action, for menu item:
+-(void) selectionDidChange:(NSNotification *)noti {
+    if ([[noti object] isKindOfClass:[NSTextView class]]) {
+        NSTextView* textView = (NSTextView *)[noti object];
+        self.textView = textView;
+        NSArray* selectedRanges = [textView selectedRanges];
+        if (selectedRanges.count==0) {
+            return;
+        }
+        
+        self.selectedRange = [[selectedRanges objectAtIndex:0] rangeValue];
+        NSString* text = textView.textStorage.string;
+        self.selectedText = [text substringWithRange:self.selectedRange];
+        
+    }
+
+}
+
 - (void)doMenuAction
 {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
+    if (self.selectedText) {
+        NSArray *lines = [self.selectedText componentsSeparatedByString:@"\n"];
+        NSInteger maxLength = 0;
+        for (NSString *line in lines) {
+            maxLength = line.length > maxLength ? line.length : maxLength;
+        }
+        NSMutableString *muLines = [NSMutableString new];
+        for (NSString *line in lines) {
+            NSInteger numOfSpace = maxLength - line.length;
+            NSString *newLine = [self addCommentsNum:numOfSpace toString:line];
+            [muLines appendString:newLine];
+        }
+
+        if ([self.textView shouldChangeTextInRange:self.selectedRange replacementString:muLines]) {
+            [self.textView.textStorage replaceCharactersInRange:self.selectedRange withString:muLines];
+            [self.textView didChangeText];
+        }
+        
+    }
+}
+
+- (NSString *)addCommentsNum:(NSInteger)numOfSpace toString:(NSString *)string {
+    NSMutableString *muString = [[NSMutableString alloc] initWithString:string];
+    if ([string isEqualToString:@""]) {
+        [muString appendString:@"\n"];
+    } else {
+        for (NSInteger i = 0; i < numOfSpace; i++) {
+            [muString appendString:@" "];
+        }
+        [muString appendString:@"//\n"];
+    }
+    
+    
+    return muString;
 }
 
 - (void)dealloc
