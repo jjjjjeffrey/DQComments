@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B92996B1C477B9B00E0A72A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92996A1C477B9B00E0A72A /* AppKit.framework */; };
+		7B92996D1C477B9B00E0A72A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92996C1C477B9B00E0A72A /* Foundation.framework */; };
+		7B9299711C477B9B00E0A72A /* DQComments.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 7B9299701C477B9B00E0A72A /* DQComments.xcscheme */; };
+		7B9299741C477B9B00E0A72A /* DQComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9299731C477B9B00E0A72A /* DQComments.m */; };
+		7B9299771C477B9B00E0A72A /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9299761C477B9B00E0A72A /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B9299671C477B9B00E0A72A /* DQComments.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DQComments.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B92996A1C477B9B00E0A72A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		7B92996C1C477B9B00E0A72A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7B9299701C477B9B00E0A72A /* DQComments.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = DQComments.xcscheme; path = DQComments.xcodeproj/xcshareddata/xcschemes/DQComments.xcscheme; sourceTree = SOURCE_ROOT; };
+		7B9299721C477B9B00E0A72A /* DQComments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQComments.h; sourceTree = "<group>"; };
+		7B9299731C477B9B00E0A72A /* DQComments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQComments.m; sourceTree = "<group>"; };
+		7B9299751C477B9B00E0A72A /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		7B9299761C477B9B00E0A72A /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		7B9299781C477B9B00E0A72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B9299651C477B9B00E0A72A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B92996B1C477B9B00E0A72A /* AppKit.framework in Frameworks */,
+				7B92996D1C477B9B00E0A72A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B92995E1C477B9B00E0A72A = {
+			isa = PBXGroup;
+			children = (
+				7B92996E1C477B9B00E0A72A /* DQComments */,
+				7B9299691C477B9B00E0A72A /* Frameworks */,
+				7B9299681C477B9B00E0A72A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B9299681C477B9B00E0A72A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B9299671C477B9B00E0A72A /* DQComments.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B9299691C477B9B00E0A72A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B92996A1C477B9B00E0A72A /* AppKit.framework */,
+				7B92996C1C477B9B00E0A72A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B92996E1C477B9B00E0A72A /* DQComments */ = {
+			isa = PBXGroup;
+			children = (
+				7B9299721C477B9B00E0A72A /* DQComments.h */,
+				7B9299731C477B9B00E0A72A /* DQComments.m */,
+				7B9299751C477B9B00E0A72A /* NSObject_Extension.h */,
+				7B9299761C477B9B00E0A72A /* NSObject_Extension.m */,
+				7B9299781C477B9B00E0A72A /* Info.plist */,
+				7B92996F1C477B9B00E0A72A /* Supporting Files */,
+			);
+			path = DQComments;
+			sourceTree = "<group>";
+		};
+		7B92996F1C477B9B00E0A72A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B9299701C477B9B00E0A72A /* DQComments.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B9299661C477B9B00E0A72A /* DQComments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B92997B1C477B9B00E0A72A /* Build configuration list for PBXNativeTarget "DQComments" */;
+			buildPhases = (
+				7B9299631C477B9B00E0A72A /* Sources */,
+				7B9299641C477B9B00E0A72A /* Resources */,
+				7B9299651C477B9B00E0A72A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DQComments;
+			productName = DQComments;
+			productReference = 7B9299671C477B9B00E0A72A /* DQComments.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B92995F1C477B9B00E0A72A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = 7;
+				TargetAttributes = {
+					7B9299661C477B9B00E0A72A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 7B9299621C477B9B00E0A72A /* Build configuration list for PBXProject "DQComments" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B92995E1C477B9B00E0A72A;
+			productRefGroup = 7B9299681C477B9B00E0A72A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B9299661C477B9B00E0A72A /* DQComments */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B9299641C477B9B00E0A72A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9299711C477B9B00E0A72A /* DQComments.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B9299631C477B9B00E0A72A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B9299741C477B9B00E0A72A /* DQComments.m in Sources */,
+				7B9299771C477B9B00E0A72A /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7B9299791C477B9B00E0A72A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		7B92997A1C477B9B00E0A72A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		7B92997C1C477B9B00E0A72A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = DQComments/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheely.DQComments;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		7B92997D1C477B9B00E0A72A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = DQComments/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sheely.DQComments;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B9299621C477B9B00E0A72A /* Build configuration list for PBXProject "DQComments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B9299791C477B9B00E0A72A /* Debug */,
+				7B92997A1C477B9B00E0A72A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B92997B1C477B9B00E0A72A /* Build configuration list for PBXNativeTarget "DQComments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B92997C1C477B9B00E0A72A /* Debug */,
+				7B92997D1C477B9B00E0A72A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B92995F1C477B9B00E0A72A /* Project object */;
+}
